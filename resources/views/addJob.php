@@ -17,7 +17,7 @@
       <div class="col s6 m4 offset-s3 offset-m4">
         <div class="card" class="text-darken-2">
           <div class=" card-content">
-            <form action="/curriculum/addJob.php" method="GET">
+            <form action="/curriculum/addJob.php" method="POST">
               <label for="title" class="">Título</label>
               <input type="text" name="title" id="title" placeholder="Ingresa el título">
               <label for="description">Descripción</label>

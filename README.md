@@ -20,3 +20,4 @@ ORM son las siglas de Object Relational Mapping. En la práctica esto crea una b
 
 Crear modelos basados en las tablas de nuestra base de datos. Utilizar librerías de terceros nos ayuda a ahorrarnos mucho trabajo. En este caso utilizaremos el ORM de Eloquent.
 
+El ORM convierte las tablas en clases y convierte las columnas en atributos de esa clase, por lo cual podemos acceder a las columnas de la base de datos como si fuesen atributos de una clase.
