@@ -18,4 +18,5 @@ Composer es un administrador de paquetes a nivel de aplicación para PHP, permit
 ### ¿Qué es un ORM?
 ORM son las siglas de Object Relational Mapping. En la práctica esto crea una base de datos orientada a objetos virtual, sobre la base de datos relacional. Esto posibilita el uso de las características propias de la orientación a objetos (básicamente herencia y polimorfismo), además el ORM hace más transparente las conexiones a las bases de datos, nos protege de algunas vulnerabilidades de SQL y facilita algunas validaciones a la información.
 
-Crear modelos basados en las tablas de nuestra base de datos.
+Crear modelos basados en las tablas de nuestra base de datos. Utilizar librerías de terceros nos ayuda a ahorrarnos mucho trabajo. En este caso utilizaremos el ORM de Eloquent.
+

@@ -3,4 +3,6 @@
 namespace App\Models;
 
 class Job
-{ }
+{ 
+    
+}
