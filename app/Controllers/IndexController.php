@@ -9,7 +9,7 @@ class IndexController extends BaseController
     public function getIndexAction()
     {
         $jobs = Job::all();
-        echo 'Yes';
+
         return $this->renderHTML('index.twig');
     }
     public function getError404Action()
