@@ -6,16 +6,24 @@
 
 {% block form %}
     <form action="/curriculum/jobs/add" method="POST">
-        <label class="" for="title">Título</label>
-        <input id="title" name="title" placeholder="Ingresa el título" type="text">
-        <label for="description">Descripción</label>
-        <textarea id="description" name="description" placeholder="Ingresa la descripción" required></textarea>
-        <label for="months">Meses</label>
-        <input id="months" name="months" placeholder="Ingresa la cantidad de meses trabajados" required type="number">
-        <label for="achievements">Logros</label>
-        <input id="achievement1" name="achievement1" placeholder="Ingresa algún logro" type="text">
-        <input id="achievement2" name="achievement2" placeholder="Ingresa algún logro" type="text">
-        <input id="achievement3" name="achievement3" placeholder="Ingresa algún logro" type="text">
-        <button class="mt-2 waves-effect waves-light btn blue darken-4" type="submit">Añadir</button>
+        <div class="form-group">
+            <label class="" for="title">Título</label>
+            <input class="form-control" id="title" name="title" placeholder="Ingresa el título" type="text">
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea class="form-control" id="description" name="description" placeholder="Ingresa la descripción" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="months">Meses</label>
+            <input class="form-control" id="months" name="months" placeholder="Ingresa la cantidad de meses trabajados" required type="number">
+        </div>
+        <div class="form-group">
+            <label for="achievements">Logros</label>
+            <input class="form-control" id="achievement1" name="achievement1" placeholder="Ingresa algún logro" type="text">
+            <input class="form-control" id="achievement2" name="achievement2" placeholder="Ingresa algún logro" type="text">
+            <input class="form-control" id="achievement3" name="achievement3" placeholder="Ingresa algún logro" type="text">
+        </div>
+        <button class="mb-3 btn btn-primary" type="submit">Añadir</button>
     </form>
 {% endblock %}

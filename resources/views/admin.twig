@@ -1,20 +1,18 @@
 {% extends "layout.twig" %}
 {% block head %}
     <style>
-        .container {}
+        #edit:hover {
+            color: blue;
+        }
         h2 {
             margin-top: 20px;
             margin-bottom: 20px;
-        }
-        a.btn:hover {
-            color: white !important;
-
         }
     </style>
 {% endblock %}
 
 {% block content %}
-    <a class="btn btn-outline-info text-white" href="/curriculum/" id="edit">Curriculum</a>
+    <a class="btn btn-outline-light" href="/curriculum/" id="edit">Curriculum</a>
     <div class="jumbotron jumbotron-fluid bg-primary text-white">
         <div class="container">
             <h1 class="display-3">Gestiona tu Curriculum</h1>
@@ -25,7 +23,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="">Resumen Curricular</h2>
             <span>
-                <button class="btn btn-outline-primary">Modificar Resumen</button>
+                <a class="btn btn-outline-primary" href="/curriculum/resume/add">Cambiar resumen</a>
             </span>
         </div>
         <p>{{ resume }}</p>
@@ -34,7 +32,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="">Experiencia Laboral</h2>
             <span>
-                <button class="btn btn-outline-primary">Agregar trabajo</button>
+                <a class="btn btn-outline-primary" href="/curriculum/jobs/add">Agregar trabajo</a>
             </span>
         </div>
         <table class="table border">
@@ -77,7 +75,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="">Proyectos Realizados</h2>
             <span>
-                <button class="btn btn-outline-primary">Agregar proyecto</button>
+                <a class="btn btn-outline-primary" href="/curriculum/projects/add">Agregar proyecto</a>
             </span>
         </div>
         <table class="table border">
@@ -120,7 +118,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="">Habilidades & Herramientas</h2>
             <span>
-                <button class="btn btn-outline-primary">Agregar Habilidad</button>
+                <a class="btn btn-outline-primary" href="/curriculum/skills/add">Agregar Habilidad</a>
             </span>
         </div>
         <div class="container d-flex justify-content-between">
@@ -169,7 +167,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="">Idiomas</h2>
             <span>
-                <a class="btn btn-outline-primary text-primary" href="/curriculum/languages/add">Agregar Idioma</a>
+                <a class="btn btn-outline-primary" href="/curriculum/languages/add">Agregar Idioma</a>
             </span>
         </div>
         <ul>
