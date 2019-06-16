@@ -1,0 +1,16 @@
+{% extends "layout-add.twig" %}
+
+{% block title %}
+    Añade tu Resumen Curricular
+{% endblock %}
+
+{% block form %}
+    <form action="/curriculum/resume/add" method="POST">
+        <div class="form-group">
+            <label for="content">Información sobre tu perfil laboral</label>
+            <textarea class="form-control" id="content" name="content" placeholder="Ingresa tu resumen curricular" required></textarea>
+            <small class="form-text text-muted">Información como tus intereses, motivaciones, objetivos y rasgos distintivos pueden darte mejor visibilidad</small>
+        </div>
+        <button class="btn btn-primary" type="submit">Añadir</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout-add.twig" %}
+{% block title %}
+    Añade trabajos a tu curriculum
+{% endblock %}
+
+{% block form %}
+
+    <form action="/curriculum/projects/add" method="POST">
+        <div class="form-group">
+            <label for="title">Título</label>
+            <input class="form-control" id="title" name="title" placeholder="Ingresa el título" required type="text">
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea class="form-control" id="description" name="description" placeholder="Ingresa la descripción" required></textarea>
+            <small class="form-text text-muted">Cuenta a todos para que sirve y que es lo que más te gusta de este proyecto</small>
+        </div>
+        <div class="form-group">
+            <label for="technologies">Tecnologías</label>
+            <input class="form-control mb-1" id="technology1" name="technology1" placeholder="Ingresa una tecnología usada" required type="text">
+            <input class="form-control mb-1" id="technology2" name="technology2" placeholder="Ingresa una tecnología usada" type="text">
+            <input class="form-control mb-1" id="technology3" name="technology3" placeholder="Ingresa una tecnología usada" type="text">
+            <small class="form-text text-muted">Por ejemplo: HTML, CSS, JS, REACT, LARAVEL...</small>
+        </div>
+        <button class="btn btn-primary mb-3" type="submit">Añadir</button>
+    </form>
+{% endblock %}

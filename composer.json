@@ -10,6 +10,7 @@
         "vlucas/phpdotenv": "^3.3",
         "zendframework/zend-diactoros": "^1.8",
         "twig/twig": "^2.5",
-        "respect/validation": "^1.1"
+        "respect/validation": "^1.1",
+        "symfony/assetic-bundle": "^2.8"
     }
 }

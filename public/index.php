@@ -51,12 +51,57 @@ $map->post('postAddJob', '/curriculum/jobs/add', [
     'action' => 'postAddJobAction'
 ]);
 
+$map->get('getAddProject', '/curriculum/projects/add', [
+    'controller' => 'App\Controllers\ProjectsController',
+    'action' => 'getAddProjectAction'
+]);
+
+$map->post('postAddProject', '/curriculum/projects/add', [
+    'controller' => 'App\Controllers\ProjectsController',
+    'action' => 'postAddProjectAction'
+]);
+
+$map->get('getAddResume', '/curriculum/resume/add', [
+    'controller' => 'App\Controllers\ResumeController',
+    'action' => 'getAddResumeAction'
+]);
+
+$map->post('postAddResume', '/curriculum/resume/add', [
+    'controller' => 'App\Controllers\ResumeController',
+    'action' => 'postAddResumeAction'
+]);
+
+$map->get('getAddSkill', '/curriculum/skills/add', [
+    'controller' => 'App\Controllers\SkillsController',
+    'action' => 'getAddSkillsAction'
+]);
+
+$map->post('postAddSkill', '/curriculum/skills/add', [
+    'controller' => 'App\Controllers\SkillsController',
+    'action' => 'postAddSkillsAction'
+]);
+
+$map->get('getAddLanguage', '/curriculum/languages/add', [
+    'controller' => 'App\Controllers\LanguagesController',
+    'action' => 'getAddLanguagesAction'
+]);
+
+$map->post('postAddLanguage', '/curriculum/languages/add', [
+    'controller' => 'App\Controllers\LanguagesController',
+    'action' => 'postAddLanguagesAction'
+]);
+
+$map->get('getAdmin', '/curriculum/admin', [
+    'controller' => 'App\Controllers\AdminController',
+    'action' => 'getAdminAction'
+]);
+
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
 
 if (!$route) {
     $controller = new App\Controllers\IndexController;
-    $controller->getError404Action();
+    $response = $controller->getError404Action();
 } else {
     $handlerData = $route->handler;
 
@@ -65,6 +110,5 @@ if (!$route) {
 
     $controller = new $controllerName;
     $response = $controller->$actionName($request);
-
-    echo $response->getBody();
 }
+echo $response->getBody();

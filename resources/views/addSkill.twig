@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+{% block head %}
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+    <div>
+        <div class="row">
+            <div class="col s12 jumbotrom blue darken-4">
+                <h1 class="title white-text">Añadir Skills a tu resumen Curricular</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m4 offset-s3 offset-m4">
+                <div class="card" class="text-darken-2">
+                    <div class=" card-content">
+                        <form action="/curriculum/skills/add" method="POST">
+                            <label for="title">Título</label>
+                            <input id="title" name="title" placeholder="Ingrese su skill" required type="text">
+                            <label for="">Categoría</label>
+                            <p>
+                                <label>
+                                    <input checked class="with-gap" id="frontend" name="category" type="radio" value="1"/>
+                                    <span>Front-end</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="backend" name="category" type="radio" value="2">
+                                    <span>Back-end</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="framework" name="category" type="radio" value="3">
+                                    <span>Framework</span>
+                                </label>
+                            </p>
+                            <button class="mt-2 waves-effect waves-light btn blue darken-4" type="submit">Añadir</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

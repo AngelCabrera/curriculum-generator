@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+{% block head %}{% endblock %}
+{% block content %}
+    {% if alert %}
+        <div class="alert alert-success mt-3">{{ alert }}</div>
+    {% endif %}
+    <div>
+        <a class="btn btn-outline-info text-white" href="/curriculum/" id="edit">Curriculum</a>
+        <div class="jumbotron jumbotron-fluid bg-primary text-white">
+            <div class="container">
+                <h1 class="display-3">
+                    {% block title %}{% endblock %}
+                </h1>
+                <p class="lead">Añade información relevante para potenciar tu resumen curricular</p>
+            </div>
+        </div>
+        <div class="container">
+            {% block form %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}
