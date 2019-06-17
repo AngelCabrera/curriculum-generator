@@ -7,62 +7,62 @@ use Aura\Router\RouterContainer;
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
 
-$map->get('index', '/curriculum/', [
+$map->get('index', '/', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'getIndexAction'
 ]);
 
-$map->get('getAddJob', '/curriculum/jobs/add', [
+$map->get('getAddJob', '/jobs/add', [
     'controller' => 'App\Controllers\JobsController',
     'action' => 'getAddJobAction'
 ]);
 
-$map->post('postAddJob', '/curriculum/jobs/add', [
+$map->post('postAddJob', '/jobs/add', [
     'controller' => 'App\Controllers\JobsController',
     'action' => 'postAddJobAction'
 ]);
 
-$map->get('getAddProject', '/curriculum/projects/add', [
+$map->get('getAddProject', '/projects/add', [
     'controller' => 'App\Controllers\ProjectsController',
     'action' => 'getAddProjectAction'
 ]);
 
-$map->post('postAddProject', '/curriculum/projects/add', [
+$map->post('postAddProject', '/projects/add', [
     'controller' => 'App\Controllers\ProjectsController',
     'action' => 'postAddProjectAction'
 ]);
 
-$map->get('getAddResume', '/curriculum/resume/add', [
+$map->get('getAddResume', '/resume/add', [
     'controller' => 'App\Controllers\ResumeController',
     'action' => 'getAddResumeAction'
 ]);
 
-$map->post('postAddResume', '/curriculum/resume/add', [
+$map->post('postAddResume', '/resume/add', [
     'controller' => 'App\Controllers\ResumeController',
     'action' => 'postAddResumeAction'
 ]);
 
-$map->get('getAddSkill', '/curriculum/skills/add', [
+$map->get('getAddSkill', '/skills/add', [
     'controller' => 'App\Controllers\SkillsController',
     'action' => 'getAddSkillsAction'
 ]);
 
-$map->post('postAddSkill', '/curriculum/skills/add', [
+$map->post('postAddSkill', '/skills/add', [
     'controller' => 'App\Controllers\SkillsController',
     'action' => 'postAddSkillsAction'
 ]);
 
-$map->get('getAddLanguage', '/curriculum/languages/add', [
+$map->get('getAddLanguage', '/languages/add', [
     'controller' => 'App\Controllers\LanguagesController',
     'action' => 'getAddLanguagesAction'
 ]);
 
-$map->post('postAddLanguage', '/curriculum/languages/add', [
+$map->post('postAddLanguage', '/languages/add', [
     'controller' => 'App\Controllers\LanguagesController',
     'action' => 'postAddLanguagesAction'
 ]);
 
-$map->get('getAdmin', '/curriculum/admin', [
+$map->get('getAdmin', '/admin', [
     'controller' => 'App\Controllers\AdminController',
     'action' => 'getAdminAction'
 ]);
