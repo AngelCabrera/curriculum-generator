@@ -54,7 +54,12 @@ class JobsController extends BaseController
             $achieve = new JobAchievement;
             $achieve->description = $achievement;
             $achieve->job_id = $job_id;
-            $achieve->save();
+            try {
+                $achieve->save();
+                echo 'Añadido con éxito a la base de datos';
+            } catch (Exception $e) {
+                echo 'Error: ', $e->getMessage(), "\n";
+            }
         }
 
         return $this->renderHTML('addJob.twig');
