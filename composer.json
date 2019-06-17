@@ -7,7 +7,7 @@
     "require": {
         "illuminate/database": "^5.5",
         "aura/router": "^3.1",
-        "vlucas/phpdotenv": "^3.3",
+        "vlucas/phpdotenv": "^3.4",
         "zendframework/zend-diactoros": "^1.8",
         "twig/twig": "^2.5",
         "respect/validation": "^1.1",
