@@ -3,7 +3,7 @@
     Añadir Habilidades
 {% endblock %}
 {% block form %}
-    <form action="/skills/add" method="POST">
+    <form action="/curriculum-generator/skills/add" method="POST">
         <div class="form-group">
             <label for="title">Título</label>
             <input class="form-control" id="title" name="title" placeholder="Ingrese su skill" required type="text">
@@ -12,7 +12,7 @@
             <label for="">Categoría</label>
             <p>
                 <label>
-                    <input checked class="with-gap" id="frontend" name="category" type="radio" value="1"/>
+                    <input checked class="with-gap" id="frontend" name="category" type="radio" value="1"/curriculum-generator/>
                     Front-end
                 </label>
             </p>

@@ -11,6 +11,6 @@
         "zendframework/zend-diactoros": "^1.8",
         "twig/twig": "^2.5",
         "respect/validation": "^1.1",
-        "symfony/assetic-bundle": "^2.8"
+        "robmorgan/phinx": "^0.10.7"
     }
 }

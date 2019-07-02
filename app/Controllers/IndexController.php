@@ -14,7 +14,7 @@ class IndexController extends BaseController
     {
         $jobs = Job::all();
         $projects = Project::latest()->get();
-        $resume = Resume::latest()->first()->content;
+        $resume = Resume::latest()->first();
         $frontends = Skill::where('category', 1)->get();
         $backends = Skill::where('category', 2)->get();
         $frameworks = Skill::where('category', 3)->get();

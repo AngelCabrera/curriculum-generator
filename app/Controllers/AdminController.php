@@ -12,7 +12,7 @@ class AdminController extends BaseController
 {
     public function getAdminAction()
     {
-        $resume = Resume::latest()->first()->content;
+        $resume = Resume::latest()->first();
         $jobs = Job::all();
         $projects = Project::all();
         $frontend = Skill::where('category', 1)->get();
