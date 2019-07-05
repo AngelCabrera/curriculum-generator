@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class AddProjecsTable extends AbstractMigration
+class CreateMessageTable extends AbstractMigration
 {
     /**
      * Change Method.
@@ -31,13 +31,15 @@ class AddProjecsTable extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('projects');
-        $table->addColumn('title', 'string', ['limit' => 20])
-            ->addColumn('description', 'text')
-            ->addColumn('url', 'string')
+        $table = $this->table('messages');
+        
+        $table->addColumn('name', 'string')
+            ->addColumn('email', 'string')
+            ->addColumn('message', 'text')
+            ->addColumn('sent', 'boolean')
             ->addColumn('created_at', 'datetime')
-            ->addColumn('updated_at', 'datetime')
-            ->addColumn('deleted_at', 'datetime', ['null' => true])
-            ->create();
+            ->addColumn('updated_at', 'datetime');
+
+        $table->create();
     }
 }

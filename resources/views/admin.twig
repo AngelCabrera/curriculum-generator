@@ -2,7 +2,7 @@
 {% block head %}
     <style>
         #edit:hover {
-            color: blue;
+            color: var(--blue);
         }
         h2 {
             margin-top: 20px;
@@ -12,8 +12,8 @@
 {% endblock %}
 
 {% block content %}
-    <a class="btn btn-outline-light" href="/curriculum-generator/" id="edit">Curriculum</a>
     <div class="jumbotron jumbotron-fluid bg-primary text-white">
+    <a class="btn btn-outline-light" href="/curriculum-generator/" id="edit">Curriculum</a>
         <div class="container">
             <h1 class="display-3">Gestiona tu Curriculum</h1>
             <p class="lead">Añade, Modifica y Elimina datos importantes en tu Resumen Curricular</p>
@@ -62,7 +62,7 @@
                             <a href="">
                                 <i class="text-info fa fa-edit"></i>
                             </a>
-                            <a href="">
+                            <a href="/curriculum-generator/jobs/delete?id={{job.id}}">
                                 <i class="text-danger fa fa-trash"></i>
                             </a>
                         </td>

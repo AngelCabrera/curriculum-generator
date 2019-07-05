@@ -37,6 +37,7 @@ class JobsAchievementsTable extends AbstractMigration
         ->addForeignKey('job_id', 'jobs', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
         ->addColumn('created_at', 'datetime')
         ->addColumn('updated_at', 'datetime')
+        ->addColumn('deleted_at', 'datetime', ['null' => true])
         ->create();
     }
 }

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block form %}
-    <form action="/curriculum-generator/jobs/add" method="POST">
+    <form action="/curriculum-generator/jobs/add" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label class="" for="title">Título</label>
             <input class="form-control" id="title" name="title" placeholder="Ingresa el título" type="text">
@@ -23,6 +23,10 @@
             <input class="form-control" id="achievement1" name="achievement1" placeholder="Ingresa algún logro" type="text">
             <input class="form-control" id="achievement2" name="achievement2" placeholder="Ingresa algún logro" type="text">
             <input class="form-control" id="achievement3" name="achievement3" placeholder="Ingresa algún logro" type="text">
+        </div>
+        <div class="form-group">
+            <label for="logo">Logo</label>
+            <input type="file" class="form-control-file" id="logo" name="logo">
         </div>
         <button class="mb-3 btn btn-primary" type="submit">Añadir</button>
     </form>

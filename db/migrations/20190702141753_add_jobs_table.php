@@ -33,10 +33,12 @@ class AddJobsTable extends AbstractMigration
     {
         $table = $this->table('jobs');
         $table->addColumn('title', 'string', ['limit' => 20])
-            ->addColumn('description', 'string')
+            ->addColumn('description', 'text')
             ->addColumn('months', 'integer', ['signed' => false])
+            ->addColumn('url', 'string')
             ->addColumn('created_at', 'datetime')
             ->addColumn('updated_at', 'datetime')
+            ->addColumn('deleted_at', 'datetime', ['null' => true])
             ->create();
     }
 }

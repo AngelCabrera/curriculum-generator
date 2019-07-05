@@ -36,6 +36,7 @@ class AddSkillsTable extends AbstractMigration
             ->addColumn('category', 'integer', ['signed' => false])
             ->addColumn('created_at', 'datetime')
             ->addColumn('updated_at', 'datetime')
+            ->addColumn('deleted_at', 'datetime', ['null' => true])
             ->create();
     }
 }

@@ -11,6 +11,12 @@
         "zendframework/zend-diactoros": "^1.8",
         "twig/twig": "^2.5",
         "respect/validation": "^1.1",
-        "robmorgan/phinx": "^0.10.7"
+        "robmorgan/phinx": "^0.10.7",
+        "filp/whoops": "^2.4",
+        "woohoolabs/harmony": "^6.1",
+        "zendframework/zend-httphandlerrunner": "^1.1",
+        "middlewares/aura-router": "^1.1",
+        "symfony/console": "^4.3",
+        "swiftmailer/swiftmailer": "^6.0"
     }
 }

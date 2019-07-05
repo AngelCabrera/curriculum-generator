@@ -37,6 +37,7 @@ class AddProjectsTechnologies extends AbstractMigration
             ->addForeignKey('project_id', 'projects', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
             ->addColumn('created_at', 'datetime')
             ->addColumn('updated_at', 'datetime')
+            ->addColumn('deleted_at', 'datetime', ['null' => true])
             ->create();
     }
 }

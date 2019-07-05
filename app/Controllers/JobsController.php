@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\Job;
 use App\Models\JobAchievement;
 use Respect\Validation\Validator as v;
+use Zend\Diactoros\ServerRequest;
+use Zend\Diactoros\Response\RedirectResponse;
 
 class JobsController extends BaseController
 {
@@ -13,10 +15,21 @@ class JobsController extends BaseController
         return $this->renderHTML('addJob.twig');
     }
 
-    public function postAddJobAction($request)
+    public function postAddJobAction(ServerRequest $request)
     {
         $data = $request->getParsedBody();
+        
+        $files = $request->getUploadedFiles();
+        $fullPath = '';
+        $logo = $files['logo'];
+        if($logo->getError() == UPLOAD_ERR_OK) {
+            $filename = $logo->getClientFilename();
+            $fullPath = "uploads/$filename";
 
+            $logo->moveTo($fullPath);
+        }
+        
+        
         $stringValidator = v::stringType()
             ->notEmpty()
             ->length(5, null);
@@ -31,10 +44,11 @@ class JobsController extends BaseController
             $job->title = $data['title'];
             $job->description = $data['description'];
             $job->months = $data['months'];
+            $job->url = $fullPath;
 
             try {
                 $job->save();
-                echo 'Añadido con éxito a la base de datos';
+                
             } catch (Exception $e) {
                 echo 'Error: ', $e->getMessage(), "\n";
             }
@@ -56,12 +70,20 @@ class JobsController extends BaseController
             $achieve->job_id = $job_id;
             try {
                 $achieve->save();
-                echo 'Añadido con éxito a la base de datos';
+                
             } catch (Exception $e) {
                 echo 'Error: ', $e->getMessage(), "\n";
             }
         }
-
+        echo 'Añadido con éxito a la base de datos';
         return $this->renderHTML('addJob.twig');
+    }
+    
+    public function deleteJobAction(ServerRequest $request){
+        $params = $request->getQueryParams();
+        $id = $params['id'];
+        $job = Job::findOrFail($id);
+        $job->delete();
+        return new RedirectResponse('/curriculum-generator/admin');
     }
 }

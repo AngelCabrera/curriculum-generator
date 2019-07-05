@@ -32,9 +32,10 @@ class AddResumeTable extends AbstractMigration
     public function change()
     {
         $table = $this->table('resume');
-        $table->addColumn('content', 'string')
+        $table->addColumn('content', 'text')
             ->addColumn('created_at', 'datetime')
             ->addColumn('updated_at', 'datetime')
+            ->addColumn('deleted_at', 'datetime', ['null' => true])
             ->create();
     }
 }

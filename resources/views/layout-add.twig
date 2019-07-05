@@ -2,17 +2,17 @@
 {% block head %}
     <style>
         #edit:hover {
-            color: blue;
+            color: #007bff;
         }
     </style>
 {% endblock %}
 {% block content %}
-    {% if alert %}
-        <div class="alert alert-success mt-3">{{ alert }}</div>
+    {% if message %}
+        <div class="alert alert-success mt-3">{{ message }}</div>
     {% endif %}
     <div>
-        <a class="btn btn-outline-light" href="/curriculum-generator/" id="edit">Curriculum</a>
         <div class="jumbotron jumbotron-fluid bg-primary text-white">
+        <a class="btn btn-outline-light" href="/curriculum-generator/" id="edit">Curriculum</a>
             <div class="container">
                 <h1 class="display-3">
                     {% block title %}{% endblock %}

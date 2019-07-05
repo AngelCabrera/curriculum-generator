@@ -35,6 +35,7 @@ class AddLanguagesTable extends AbstractMigration
             ->addColumn('language', 'string', ["limit" => 20])
             ->addColumn('created_at', 'datetime')
             ->addColumn('updated_at', 'datetime')
+            ->addColumn('deleted_at', 'datetime', ['null' => true])
             ->create();
     }
 }

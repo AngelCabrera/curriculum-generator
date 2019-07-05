@@ -73,11 +73,13 @@
         </div>
         <div class="row">
             <div class="col-8">
-                <div>
                     <h3 class="border-bottom-gray">Experiencia laboral</h3>
-                    <ul>
                         {% for job in jobs %}
-                            <li class="work-position">
+	                    <div class="row">
+                            <div class="col-3">
+                                <img src="{{ job.getImage(job.title) }}" alt="" style="max-width: 100%">
+                            </div>
+                            <div class="col">
                                 <h5>{{ job.title }}</h5>
                                 <p>{{ job.description }}</p>
                                 {% if job.achievements[0] %}
@@ -90,10 +92,9 @@
                                         {% endfor %}
                                     </ul>
                                 {% endif %}
-                            </li>
+                            </div>
+                        </div>
                         {% endfor %}
-                    </ul>
-                </div>
                 <div>
                     <h3 class="border-bottom-gray">Proyectos</h3>
                     {% for project in projects %}

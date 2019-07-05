@@ -8,61 +8,76 @@ $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
 
 $map->get('index', '/curriculum-generator/', [
-    'controller' => 'App\Controllers\IndexController',
-    'action' => 'getIndexAction'
+     'App\Controllers\IndexController',
+     'getIndexAction'
 ]);
 
 $map->get('getAddJob', '/curriculum-generator/jobs/add', [
-    'controller' => 'App\Controllers\JobsController',
-    'action' => 'getAddJobAction'
+     'App\Controllers\JobsController',
+     'getAddJobAction'
 ]);
 
 $map->post('postAddJob', '/curriculum-generator/jobs/add', [
-    'controller' => 'App\Controllers\JobsController',
-    'action' => 'postAddJobAction'
+     'App\Controllers\JobsController',
+     'postAddJobAction'
+]);
+
+$map->get('deleteJob', '/curriculum-generator/jobs/delete', [
+     'App\Controllers\JobsController',
+     'deleteJobAction'
 ]);
 
 $map->get('getAddProject', '/curriculum-generator/projects/add', [
-    'controller' => 'App\Controllers\ProjectsController',
-    'action' => 'getAddProjectAction'
+     'App\Controllers\ProjectsController',
+     'getAddProjectAction'
 ]);
 
 $map->post('postAddProject', '/curriculum-generator/projects/add', [
-    'controller' => 'App\Controllers\ProjectsController',
-    'action' => 'postAddProjectAction'
+     'App\Controllers\ProjectsController',
+     'postAddProjectAction'
 ]);
 
 $map->get('getAddResume', '/curriculum-generator/resume/add', [
-    'controller' => 'App\Controllers\ResumeController',
-    'action' => 'getAddResumeAction'
+     'App\Controllers\ResumeController',
+     'getAddResumeAction'
 ]);
 
 $map->post('postAddResume', '/curriculum-generator/resume/add', [
-    'controller' => 'App\Controllers\ResumeController',
-    'action' => 'postAddResumeAction'
+     'App\Controllers\ResumeController',
+     'postAddResumeAction'
 ]);
 
 $map->get('getAddSkill', '/curriculum-generator/skills/add', [
-    'controller' => 'App\Controllers\SkillsController',
-    'action' => 'getAddSkillsAction'
+     'App\Controllers\SkillsController',
+     'getAddSkillsAction'
 ]);
 
 $map->post('postAddSkill', '/curriculum-generator/skills/add', [
-    'controller' => 'App\Controllers\SkillsController',
-    'action' => 'postAddSkillsAction'
+     'App\Controllers\SkillsController',
+     'postAddSkillsAction'
 ]);
 
 $map->get('getAddLanguage', '/curriculum-generator/languages/add', [
-    'controller' => 'App\Controllers\LanguagesController',
-    'action' => 'getAddLanguagesAction'
+     'App\Controllers\LanguagesController',
+     'getAddLanguagesAction'
 ]);
 
 $map->post('postAddLanguage', '/curriculum-generator/languages/add', [
-    'controller' => 'App\Controllers\LanguagesController',
-    'action' => 'postAddLanguagesAction'
+     'App\Controllers\LanguagesController',
+     'postAddLanguagesAction'
 ]);
 
 $map->get('getAdmin', '/curriculum-generator/admin', [
-    'controller' => 'App\Controllers\AdminController',
-    'action' => 'getAdminAction'
+     'App\Controllers\AdminController',
+     'getAdminAction'
+]);
+
+$map->get('contactForm', '/curriculum-generator/contact', [
+     'App\Controllers\ContacController',
+     'getContactAction'
+]);
+
+$map->post('contactSend', '/curriculum-generator/contact/send', [
+     'App\Controllers\ContacController',
+     'postContactAction'
 ]);
